@@ -1,5 +1,5 @@
 {
-  "name": "muse",
+  "name": "museblockchain-js",
   "version": "0.0.1",
   "description": "Muse.js the JavaScript API for Muse blockchain",
   "main": "index.js",
