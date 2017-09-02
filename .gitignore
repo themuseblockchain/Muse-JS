@@ -17,5 +17,4 @@ dist/muse-tests.min.js*
 .envrc
 .idea
 .save
-lib
 dist
