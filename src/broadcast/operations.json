@@ -485,6 +485,139 @@
   },
   {
     "roles": ["active"],
+    "operation": "content",
+    "params": [
+      "uploader",
+      "url",
+      "album_meta",
+      "track_meta",
+      "comp_meta",
+      "distributions", 
+      "management",
+      "management_threshold",
+      "distributions_comp",
+      "management_comp",
+      "management_threshold_comp", 
+      "playing_reward", "publishers_share"
+    ]
+  },
+  {
+    "roles": ["active"],
+    "operation": "content_update",
+    "params": [
+      "url",
+      "side",
+      "album_meta",
+      "track_meta",
+      "comp_meta",
+      "new_distributions",
+      "new_management",
+      "new_threshold",
+      "new_playing_reward",
+      "new_publishers_share"
+    ]
+  },
+  {
+    "roles": ["active"],
+    "operation": "content_approve",
+    "params": [
+      "approver",
+      "url"
+    ]
+  },
+  {
+    "roles": ["active"],
+    "operation": "content_remove",
+    "params": [
+      "url"
+    ]
+  },
+  {
+    "roles": ["active"],
+    "operation": "friendship",
+    "params": [
+       "who",
+       "whom"
+    ]
+  },
+  {
+    "roles": ["active"],
+    "operation": "unfriend",
+    "params": [
+      "who",
+      "whom"
+    ]
+  },
+  {
+    "roles": ["active"],
+    "operation": "content_reward",
+    "params": [
+      "payee",
+      "url",
+      "mbd_payout",
+      "vesting_payout" 
+    ]
+  },
+  {
+    "roles": ["active"],
+    "operation": "curate_reward",
+    "params": [
+      "curator",
+      "url",
+      "mbd_payout",
+      "vesting_payout"
+    ]
+  },
+  {
+    "roles": ["active"],
+    "operation": "playing_reward",
+    "params": [
+      "platform",
+      "url",
+      "mbd_payout",
+      "vesting_payout"
+    ]
+  },
+  {
+    "roles": ["active"],
+    "operation": "streaming_platform_report",
+    "params": [
+      "streaming_platform",
+      "consumer",
+      "content",
+      "playlist_creator",
+      "play_time"
+    ]
+  },
+  {
+    "roles": ["active"],
+    "operation": "account_streaming_platform_vote",
+    "params": [
+      "account",
+      "streaming_platform",
+      "approve"
+    ]
+  },
+  {
+    "roles": ["active"],
+    "operation": "streaming_platform_update",
+    "params": [
+      "owner",
+      "url",
+      "fee"
+    ]
+  },
+  {
+    "roles": ["active"],
+    "operation": "vote",
+    "params": [
+      "voter",
+      "url",
+      "weight" 
+    ]
+  },
+  {
+    "roles": ["active"],
     "operation": "balance_claim",
     "params": [
       "deposit_to_account",
