@@ -1,5 +1,5 @@
 {
-  "name": "museblockchain-js",
+  "name": "muse-js",
   "version": "0.1.1",
   "authors": "tadasu85, gchampagne",
   "description": "Muse.js the JavaScript API for Muse blockchain",
@@ -57,5 +57,14 @@
     "should": "^11.1.0",
     "webpack": "^1.13.2",
     "webpack-visualizer-plugin": "^0.1.5"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/themuseblockchain/Muse-JS/issues"
+  },
+  "homepage": "https://github.com/themuseblockchain/Muse-JS#readme",
+  "directories": {
+    "test": "test"
+  },
+  "author": "Tadasu85 <johnstor@gmail.com> (https://github.com/Tadasu85)",
+  "license": "ISC"
 }
