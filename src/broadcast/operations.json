@@ -498,7 +498,8 @@
       "distributions_comp",
       "management_comp",
       "management_threshold_comp", 
-      "playing_reward", "publishers_share"
+      "playing_reward", 
+      "publishers_share"
     ]
   },
   {

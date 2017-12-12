@@ -264,7 +264,7 @@ facade.accountInfo = function(userName, callback)
             userName: accountInfo.name,
             recoveryAccount: accountInfo.recoveryAccount,
             balance: Number(accountInfo.balance.split(" ")[0]),
-            vesting: Number(vestingMuse(accountInfo, global)),
+            vesting: Number(accountInfo.vesting_shares.split(" ")[0]),
             publicOwnerKey: readAuthorityPubKey(accountInfo.owner),
             publicActiveKey: readAuthorityPubKey(accountInfo.active),
             publicBasicKey: readAuthorityPubKey(accountInfo.basic),
