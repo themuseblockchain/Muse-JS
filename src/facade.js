@@ -24,7 +24,7 @@ var prepareWifOrPassword = function(userName, passwordOrWif, requiredKeyType /*o
   else
   {
     var keys_to_use = auth.getPrivateKeys(userName, passwordOrWif, [requiredKeyType]);
-    return keys_to_use[requiredKeyType];  
+    return keys_to_use[requiredKeyType];
   }
 };
 
@@ -88,7 +88,7 @@ facade.createAccountWithKeys = function(userName, ownerPubkey, activePubkey, bas
         faucet_config.private_wif,
         faucet_config.account_creation_fee,
         faucet_config.account,
-        userName, 
+        userName,
         {
           "weight_threshold": 1,
           "account_auths": [],
@@ -148,8 +148,8 @@ facade.createAccountWithKeys = function(userName, ownerPubkey, activePubkey, bas
                   else
                   {
                     fctFunds();
-                  }  
-                }); 
+                  }
+                });
               }
               else
               {
@@ -181,7 +181,7 @@ facade.createAccount = function(userName, password, callback)
         faucet_config.private_wif,
         faucet_config.account_creation_fee,
         faucet_config.account,
-        userName, 
+        userName,
         {
           "weight_threshold": 1,
           "account_auths": [],
@@ -214,7 +214,7 @@ facade.createAccount = function(userName, password, callback)
 
 facade.updateAccountKeys = function(userName, passwordOrWif, ownerPubkey, activePubkey, basicPubkey, memoPubkey, callback)
 {
-  broadcast.accountUpdate(prepareWifOrPassword(userName, passwordOrWif, ['owner']), userName, 
+  broadcast.accountUpdate(prepareWifOrPassword(userName, passwordOrWif, ['owner']), userName,
     ownerPubkey == null ? undefined :
     {
             "weight_threshold": 1,
@@ -262,22 +262,25 @@ facade.accountInfo = function(userName, callback)
           callback(1, "Success", {
             id: accountInfo.id,
             userName: accountInfo.name,
-            recoveryAccount: accountInfo.recoveryAccount,
+            recoveryAccount: accountInfo.recovery_account,
             balance: Number(accountInfo.balance.split(" ")[0]),
             vesting: Number(accountInfo.vesting_shares.split(" ")[0]),
+            vestingWithdrawRate: Number(accountInfo.vesting_withdraw_rate.split(" ")[0]),
             publicOwnerKey: readAuthorityPubKey(accountInfo.owner),
             publicActiveKey: readAuthorityPubKey(accountInfo.active),
             publicBasicKey: readAuthorityPubKey(accountInfo.basic),
             publicMemoKey: accountInfo.memo_key,
             dateCreated: new Date(accountInfo.created),
             dateLastActive: new Date(accountInfo.last_active),
+            nextWithdraw: new Date(accountInfo.next_vesting_withdrawal),
             witnessVotes: accountInfo.witness_votes
-          });  
+          });
         }
         else
         {
-          callback(-1, "Error", null);  
+          callback(-1, "Error", null);
         }
+
       });
     }
     else
@@ -308,23 +311,23 @@ facade.login = function(userName, passwordOrWif, callback)
         }
         var keysToCheck = [];
         var tmpKey = readAuthorityPubKey(accountInfo.owner);
-        if(tmpKey != null) { keysToCheck.push(tmpKey); }  
+        if(tmpKey != null) { keysToCheck.push(tmpKey); }
         tmpKey = readAuthorityPubKey(accountInfo.active);
-        if(tmpKey != null) { keysToCheck.push(tmpKey); }  
+        if(tmpKey != null) { keysToCheck.push(tmpKey); }
         tmpKey = readAuthorityPubKey(accountInfo.basic);
-        if(tmpKey != null) { keysToCheck.push(tmpKey); } 
-      
+        if(tmpKey != null) { keysToCheck.push(tmpKey); }
+
         var bFoundKey = false;
         keys.forEach(function(aKeyToVerify){
           keysToCheck.forEach(function(accountKey){
             if(aKeyToVerify == accountKey)
             {
-              bFoundKey = true;  
-            }  
+              bFoundKey = true;
+            }
           });
         });
 
-        callback(bFoundKey ? 1 : -1, bFoundKey ? "Success" : "Invalid password / wif"); 
+        callback(bFoundKey ? 1 : -1, bFoundKey ? "Success" : "Invalid password / wif");
       }
       else
       {
@@ -377,7 +380,7 @@ facade.accountHistory = function(userName, from, count, formatter, callback)
     }
     else
     {
-      callback(-1, "Error", null);  
+      callback(-1, "Error", null);
     }
   });
 };
@@ -405,7 +408,7 @@ facade.claimBalance = function(targetAccount, sourceKey, callback)
             {
               callback(-1, "Error", null);
             }
-          });  
+          });
         });
       }
       else
@@ -417,7 +420,7 @@ facade.claimBalance = function(targetAccount, sourceKey, callback)
   catch(ex)
   {
       callback(-3, "Error Processing Key", null);
-  } 
+  }
 };
 
 
@@ -463,7 +466,7 @@ facade.witnessInfo = function(witnessUserName, callback)
         url: result.url,
         signing_key: result.signing_key,
         last_confirmed_block_num: result.last_confirmed_block_num
-      }); 
+      });
     }
     else
     {
