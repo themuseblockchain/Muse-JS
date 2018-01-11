@@ -1,4 +1,4 @@
-[
+export default [
   {
     "api": "database_api",
     "method": "set_subscribe_callback",
@@ -506,45 +506,45 @@
     "api": "database_api",
     "method": "get_account_from_id",
     "params": ["account_id"]
-  },   
-  {   
-    "api": "database_api",    
-    "method": "get_content_by_uploader",    
-    "params": ["uploader"]    
-  },    
-  {   
-    "api": "database_api",    
-    "method": "get_reports_for_account",    
-    "params": ["account"]   
-  },    
-  {   
-    "api": "database_api",    
-    "method": "get_account_scoring",    
-    "params": ["account"]   
-  },    
-  {   
-    "api": "database_api",    
-    "method": "get_content_scoring",    
-    "params": ["content"]   
-  },    
-  {   
-    "api": "database_api",    
-    "method": "lookup_streaming_platform_accounts",   
-    "params": ["content"]   
-  },    
-  {   
-    "api": "database_api",    
-    "method": "is_streaming_platform",    
-    "params": ["content"]   
-  },    
-  {   
-    "api": "database_api",    
-    "method": "get_content_by_url",   
-    "params": ["url"]   
-  },    
-  {   
-    "api": "database_api",    
-    "method": "lookup_content",   
+  },
+  {
+    "api": "database_api",
+    "method": "get_content_by_uploader",
+    "params": ["uploader"]
+  },
+  {
+    "api": "database_api",
+    "method": "get_reports_for_account",
+    "params": ["account"]
+  },
+  {
+    "api": "database_api",
+    "method": "get_account_scoring",
+    "params": ["account"]
+  },
+  {
+    "api": "database_api",
+    "method": "get_content_scoring",
+    "params": ["content"]
+  },
+  {
+    "api": "database_api",
+    "method": "lookup_streaming_platform_accounts",
+    "params": ["content"]
+  },
+  {
+    "api": "database_api",
+    "method": "is_streaming_platform",
+    "params": ["content"]
+  },
+  {
+    "api": "database_api",
+    "method": "get_content_by_url",
+    "params": ["url"]
+  },
+  {
+    "api": "database_api",
+    "method": "lookup_content",
     "params": ["start", "limit"]
   }
-]
+];
