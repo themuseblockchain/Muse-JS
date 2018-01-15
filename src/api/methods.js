@@ -378,7 +378,7 @@ export default [
   {
     "api": "database_api",
     "method": "lookup_streaming_platform_accounts",
-    "params": ["username", "limit"]
+    "params": ["lowerBoundName", "limit"]
   },
   {
     "api": "follow_api",
@@ -525,11 +525,6 @@ export default [
   {
     "api": "database_api",
     "method": "get_content_scoring",
-    "params": ["content"]
-  },
-  {
-    "api": "database_api",
-    "method": "lookup_streaming_platform_accounts",
     "params": ["content"]
   },
   {

@@ -1,6 +1,6 @@
 {
   "name": "muse-js",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "authors": "tadasu85, gchampagne",
   "description": "Muse.js the JavaScript API for Muse blockchain",
   "main": "index.js",
@@ -27,6 +27,7 @@
     "bluebird": "^3.4.6",
     "browserify-aes": "^1.0.6",
     "bs58": "^4.0.0",
+    "bufferutil": "^3.0.3",
     "bytebuffer": "^5.0.1",
     "create-hash": "^1.1.2",
     "create-hmac": "^1.1.4",
@@ -36,7 +37,8 @@
     "lodash": "^4.16.4",
     "secure-random": "^1.1.1",
     "tls": "0.0.1",
-    "ws": "^1.1.1"
+    "utf-8-validate": "^4.0.0",
+    "ws": "4.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",
