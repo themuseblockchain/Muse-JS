@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+
+        <h1 id="Testing"></h1>
+        <title>Testing</title>
+        <center>
+        <style>
+            #result_zone strong {
+                color: white;
+                background-color: black;
+                padding: 2px;
+            }
+            body {
+                border-style: double;
+
+            }
+            #credits {
+                color: white;
+                background-color: green;
+                margin: 5px;
+            }
+            #NodeData {
+                margin: 20px;
+                background-color: green;
+            }
+        </style>
+
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+
+        <script src="./dist/muse.min.js"></script>
+
+    </head>
+
+    <body>
+
+        </section>
+    </center>
+    <br/>
+    <br/>
+        <script>
+
+            // The username and activekey is requested, stored in the var username and displayed in the title
+
+            var username = null;
+
+            //muse activekey is requested and stored in var activekey this means it is only local cache and when this page is cache cleared the activekey is gone.
+
+            var activekey = null;
+
+            document.title = username + ' - ' + document.title;
+
+            //Set the websocket to be used for the script.
+
+            muse.config.set('websocket','wss://api.muse.blckchnd.com');
+
+            //Ping the node for the latest block, this help verify connectivity.
+
+            muse.api.streamBlockAsync(function(err, t) {
+                $('#NodeData').replaceWith("<p id='NodeData'>Current block time is: " + t.timestamp + "</p>");
+            })
+
+            muse.api.getConfig(function(err, response){
+              console.log(err, response);
+            });
+
+
+            muse.api.getAccounts([username], function(err, response){
+              console.log(err, response);
+            });
+
+
+        </script>
+    </body>
+</html>
