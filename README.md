@@ -13,3 +13,5 @@ If you are making a PR to the library please compile and test the code before su
 Compile with :
 
 npm run build-browser && npm run build-node
+
+You can open testingindex.html to check and test your code.

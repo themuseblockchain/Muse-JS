@@ -1,6 +1,6 @@
 {
   "name": "muse-js",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "authors": "tadasu85, gchampagne",
   "description": "Muse.js the JavaScript API for Muse blockchain",
   "main": "index.js",

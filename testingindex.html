@@ -58,8 +58,11 @@
             //Ping the node for the latest block, this help verify connectivity.
 
             muse.api.streamBlockAsync(function(err, t) {
-                $('#NodeData').replaceWith("<p id='NodeData'>Current block time is: " + t.timestamp + "</p>");
-            })
+              console.log(err, t.transactions);
+            });
+            muse.api.getAccountCount(function(err, t) {
+              console.log("Number of Accounts on Muse: " + err, t);
+            });
 
             muse.api.getConfig(function(err, response){
               console.log(err, response);
