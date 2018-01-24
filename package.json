@@ -40,7 +40,7 @@
     "secure-random": "^1.1.1",
     "tls": "0.0.1",
     "utf-8-validate": "^4.0.0",
-    "ws": "4.0.0"
+    "ws": "1.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",
