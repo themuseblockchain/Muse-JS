@@ -55,7 +55,7 @@ function makeStyleLoaders(options) {
   return [
     {
       test: /\.s[ac]ss$/,
-      loader: ExtractTextPlugin.extract(
+      loader: webpack.ExtractTextPlugin.extract(
         'style-loader',
         'css!autoprefixer-loader?browsers=last 2 version!sass'
       ),
@@ -78,9 +78,9 @@ function makeConfig(options) {
       path: path.join(options.baseDir, 'dist'),
       filename: '[name].min.js',
     },
-	node: {
-		fs: "empty"
-	},
+    node: {
+      fs: "empty"
+    },
     plugins: makePlugins(options),
     module: {
       loaders: [
@@ -95,6 +95,11 @@ function makeConfig(options) {
         },
       ],
     },
+    resolve: {
+      alias: {
+        ws: path.join(options.baseDir, 'src/shim/ws.js')
+      }
+    }
   };
 }
 
