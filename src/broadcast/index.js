@@ -3,7 +3,7 @@ import newDebug from 'debug';
 import noop from 'lodash/noop';
 
 import formatter from '../formatter';
-import operations from './operations.json';
+import operations from './operations.js';
 import museApi from '../api';
 import museAuth from '../auth';
 import { camelCase } from '../util';

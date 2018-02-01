@@ -1,4 +1,4 @@
-[
+export default [
   {
     "roles": ["posting"],
     "operation": "vote",
@@ -264,7 +264,7 @@
       "to",
       "agent",
       "escrow_id",
-      "sbd_amount",
+      "mbd_amount",
       "muse_amount",
       "fee",
       "ratification_deadline",
@@ -293,7 +293,7 @@
       "who",
       "receiver",
       "escrow_id",
-      "sbd_amount",
+      "mbd_amount",
       "muse_amount"
     ]
   },
@@ -386,7 +386,7 @@
     "params": [
       "account",
       "reward_muse",
-      "reward_sbd",
+      "reward_mbd",
       "reward_vests"
     ]
   },
@@ -492,13 +492,13 @@
       "album_meta",
       "track_meta",
       "comp_meta",
-      "distributions", 
+      "distributions",
       "management",
       "management_threshold",
       "distributions_comp",
       "management_comp",
-      "management_threshold_comp", 
-      "playing_reward", 
+      "management_threshold_comp",
+      "playing_reward",
       "publishers_share"
     ]
   },
@@ -556,7 +556,7 @@
       "payee",
       "url",
       "mbd_payout",
-      "vesting_payout" 
+      "vesting_payout"
     ]
   },
   {
@@ -614,7 +614,7 @@
     "params": [
       "voter",
       "url",
-      "weight" 
+      "weight"
     ]
   },
   {

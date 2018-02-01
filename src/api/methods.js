@@ -1,4 +1,4 @@
-[
+export default [
   {
     "api": "database_api",
     "method": "set_subscribe_callback",
@@ -27,81 +27,6 @@
     "api": "database_api",
     "method": "get_tags_used_by_author",
     "params": ["author"]
-  },
-  {
-    "api": "database_api",
-    "method": "get_post_discussions_by_payout",
-    "params": ["query"]
-  },
-  {
-    "api": "database_api",
-    "method": "get_comment_discussions_by_payout",
-    "params": ["query"]
-  },
-  {
-    "api": "database_api",
-    "method": "get_discussions_by_trending",
-    "params": ["query"]
-  },
-  {
-    "api": "database_api",
-    "method": "get_discussions_by_trending30",
-    "params": ["query"]
-  },
-  {
-    "api": "database_api",
-    "method": "get_discussions_by_created",
-    "params": ["query"]
-  },
-  {
-    "api": "database_api",
-    "method": "get_discussions_by_active",
-    "params": ["query"]
-  },
-  {
-    "api": "database_api",
-    "method": "get_discussions_by_cashout",
-    "params": ["query"]
-  },
-  {
-    "api": "database_api",
-    "method": "get_discussions_by_payout",
-    "params": ["query"]
-  },
-  {
-    "api": "database_api",
-    "method": "get_discussions_by_votes",
-    "params": ["query"]
-  },
-  {
-    "api": "database_api",
-    "method": "get_discussions_by_children",
-    "params": ["query"]
-  },
-  {
-    "api": "database_api",
-    "method": "get_discussions_by_hot",
-    "params": ["query"]
-  },
-  {
-    "api": "database_api",
-    "method": "get_discussions_by_feed",
-    "params": ["query"]
-  },
-  {
-    "api": "database_api",
-    "method": "get_discussions_by_blog",
-    "params": ["query"]
-  },
-  {
-    "api": "database_api",
-    "method": "get_discussions_by_comments",
-    "params": ["query"]
-  },
-  {
-    "api": "database_api",
-    "method": "get_discussions_by_promoted",
-    "params": ["query"]
   },
   {
     "api": "database_api",
@@ -358,10 +283,6 @@
     "method": "get_active_witnesses"
   },
   {
-    "api": "database_api",
-    "method": "get_miner_queue"
-  },
-  {
     "api": "login_api",
     "method": "login",
     "params": ["username", "password"]
@@ -378,7 +299,7 @@
   {
     "api": "database_api",
     "method": "lookup_streaming_platform_accounts",
-    "params": ["username", "limit"]
+    "params": ["lowerBoundName", "limit"]
   },
   {
     "api": "follow_api",
@@ -506,45 +427,40 @@
     "api": "database_api",
     "method": "get_account_from_id",
     "params": ["account_id"]
-  },   
-  {   
-    "api": "database_api",    
-    "method": "get_content_by_uploader",    
-    "params": ["uploader"]    
-  },    
-  {   
-    "api": "database_api",    
-    "method": "get_reports_for_account",    
-    "params": ["account"]   
-  },    
-  {   
-    "api": "database_api",    
-    "method": "get_account_scoring",    
-    "params": ["account"]   
-  },    
-  {   
-    "api": "database_api",    
-    "method": "get_content_scoring",    
-    "params": ["content"]   
-  },    
-  {   
-    "api": "database_api",    
-    "method": "lookup_streaming_platform_accounts",   
-    "params": ["content"]   
-  },    
-  {   
-    "api": "database_api",    
-    "method": "is_streaming_platform",    
-    "params": ["content"]   
-  },    
-  {   
-    "api": "database_api",    
-    "method": "get_content_by_url",   
-    "params": ["url"]   
-  },    
-  {   
-    "api": "database_api",    
-    "method": "lookup_content",   
+  },
+  {
+    "api": "database_api",
+    "method": "get_content_by_uploader",
+    "params": ["uploader"]
+  },
+  {
+    "api": "database_api",
+    "method": "get_reports_for_account",
+    "params": ["account"]
+  },
+  {
+    "api": "database_api",
+    "method": "get_account_scoring",
+    "params": ["account"]
+  },
+  {
+    "api": "database_api",
+    "method": "get_content_scoring",
+    "params": ["content"]
+  },
+  {
+    "api": "database_api",
+    "method": "is_streaming_platform",
+    "params": ["content"]
+  },
+  {
+    "api": "database_api",
+    "method": "get_content_by_url",
+    "params": ["url"]
+  },
+  {
+    "api": "database_api",
+    "method": "lookup_content",
     "params": ["start", "limit"]
   }
-]
+];

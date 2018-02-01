@@ -19,7 +19,9 @@
     "blockchain",
     "musejs",
     "DPOS",
-    "graphene2.4"
+    "graphene2.4",
+    "music",
+    "rightsmanagement"
   ],
   "private": false,
   "dependencies": {
@@ -65,6 +67,6 @@
   "directories": {
     "test": "test"
   },
-  "author": "Tadasu85 <johnstor@gmail.com> (https://github.com/Tadasu85)",
+  "author": "Muse Inc. Dev Team.",
   "license": "ISC"
 }
